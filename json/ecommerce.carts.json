@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "65a1d8d17408baa75dda349e"
+  },
+  "userId": "adminCoder@coder.com",
+  "products": [
+    {
+      "productId": {
+        "$oid": "6596b01588b2fccfa8c34c94"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "65aacb608b3a949c97f763c3"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6596b01588b2fccfa8c34c92"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "65aacb9e8b3a949c97f7640f"
+      }
+    }
+  ],
+  "__v": 15
+},
+{
+  "_id": {
+    "$oid": "65a2a2fa79023172d1ba2eee"
+  },
+  "userId": "enzozanino2000@gmail.com",
+  "products": [
+    {
+      "productId": {
+        "$oid": "6596b01588b2fccfa8c34c92"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "65a2a30079023172d1ba2ef4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6596b01588b2fccfa8c34c94"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "65a2a30179023172d1ba2efc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6596b01588b2fccfa8c34c96"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "65a2a30379023172d1ba2f06"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6596b01588b2fccfa8c34c99"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "65a2a30579023172d1ba2f12"
+      }
+    }
+  ],
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "65a84a988c4809921ce18528"
+  },
+  "userId": "yamilamercau7@gmail.com",
+  "products": [
+    {
+      "productId": {
+        "$oid": "6596b01588b2fccfa8c34c93"
+      },
+      "quantity": 2,
+      "_id": {
+        "$oid": "65a84a9f8c4809921ce18539"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6596b01588b2fccfa8c34c92"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "65a84af58c4809921ce1854a"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "65a84b108c4809921ce18573"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "65a84b148c4809921ce1857d"
+      }
+    }
+  ],
+  "__v": 3
+}]

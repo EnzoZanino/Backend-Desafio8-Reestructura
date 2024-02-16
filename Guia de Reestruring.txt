@@ -1,0 +1,6 @@
+Guia de Reestruring
+
+1_ productData.js              que viene desde      "/models/.."
+2_ product.Services.js         que viene desde      "/services/.."
+3_ products.Controllers.js     que viene desde      "/models/.."
+4_ products.router.js          que viene desde      "/routes/.."

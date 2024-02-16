@@ -1,0 +1,99 @@
+[{
+  "_id": {
+    "$oid": "658f1fa9cfd741b6130173d6"
+  },
+  "email": "enzozanino2000@gmail.com",
+  "message": "29/12/2023 16:36",
+  "date": {
+    "$date": "2023-12-29T19:36:09.665Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "658f27ce410565967cebf0fd"
+  },
+  "email": "enzozanino2@hotmail.com",
+  "message": "Mensaje desde otro correo",
+  "date": {
+    "$date": "2023-12-29T20:10:54.512Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6596b09ee8881a9acfb18a32"
+  },
+  "email": "enzozanino2@hotmail.com",
+  "message": "04/01/2024",
+  "date": {
+    "$date": "2024-01-04T13:20:30.497Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a1d84960fc2307f6b6d33c"
+  },
+  "email": "adminCoder@coder.com",
+  "message": "hola",
+  "date": {
+    "$date": "2024-01-13T00:24:41.731Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a29af305ff0ca4e73efa56"
+  },
+  "email": "enzozanino2000@gmail.com",
+  "message": "13/01/2024 logout patch 11:15",
+  "date": {
+    "$date": "2024-01-13T14:15:15.543Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a849968c4809921ce1847c"
+  },
+  "email": "enzozanino2000@gmail.com",
+  "message": "17/01/2024 18:41",
+  "date": {
+    "$date": "2024-01-17T21:41:42.847Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a84b428c4809921ce185db"
+  },
+  "email": "yamilamercau7@gmail.com",
+  "message": "hola",
+  "date": {
+    "$date": "2024-01-17T21:48:50.825Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a84b4b8c4809921ce185dd"
+  },
+  "email": "enzozanino2000@gmail.com",
+  "message": "hola",
+  "date": {
+    "$date": "2024-01-17T21:48:59.405Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a84d6b8c4809921ce18682"
+  },
+  "email": "adminCoder@coder.com",
+  "message": "soy el admin",
+  "date": {
+    "$date": "2024-01-17T21:58:03.096Z"
+  },
+  "__v": 0
+}]
