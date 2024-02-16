@@ -1,6 +1,37 @@
 Guia de Reestruring
 
-1_ productData.js              que viene desde      "/models/.."
-2_ product.Services.js         que viene desde      "/services/.."
-3_ products.Controllers.js     que viene desde      "/models/.."
-4_ products.router.js          que viene desde      "/routes/.."
+// Aumento
+desde app.js se obtiene la ruta productsRouter
+    Router
+    app.use('/api', routerProduct)
+0_ app.js routing app.use("/", viewRouter);.......
+1_ products.router.js          que viene desde      "/routes/.."
+2_ products.Controllers.js     que viene desde      "/models/.."
+3_ product.Services.js         que viene desde      "/services/.."
+    productData.js seria un especie de Manager(dao) ............
+4_ productData.js              que viene desde      "/models/.." `exDAO pasa a ser productManager`
+
+Consumidor            VISTA                                   ↓⇼   ROUTER
+    ↓               _________________________                       
+Controller          | CAPA DE INTERFAZ                        ↓⇼   CONTROLLER   ⇼↑
+    ↓               _________________________
+ Services    DTOS   | CAPA DE NEGOCIO                         ↓⇼   SERVICES     ⇼↑
+    ↓
+Repository          -------------------------                       REPOSITORY   ⇼↑
+    ↓               | CAPA DE ACCESO A DATOS                            
+    
+   DAO              |_________________________                ↓⇼   DAO          ⇼↑
+
+            BASE DE DATOS                                     ↓⇼   BASE DE DATOS
+
+
+
+// Disminucion
+
+tp...
+0_ app,
+1_ routes,
+2_ controllers, 
+3_ services, 
+4_ Manager("dao"), 
+5_ models
