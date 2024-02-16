@@ -1,27 +1,6 @@
 import userModel from "../models/user.model.js";
 import { isValidPassword, generateJWToken } from '../utils.js';
 
-export const githubRegister = async (req, res) => {};
-
-export const githubCallback = async (req, res) => {
-	const user = req.user;
-	const tokenUser = {
-		name: `${user.first_name} ${user.last_name}`,
-		email: user.email,
-		age: user.age,
-		role: user.role,
-		id: user._id,
-	};
-	const access_token = generateJWToken(tokenUser);
-	console.log(access_token);
-
-	res.cookie("jwtCookieToken", access_token, {
-		maxAge: 600000,
-		httpOnly: true,
-	});
-	res.redirect("/products");
-};
-
 export const register = async (req, res) => {
     console.log("Registrando usuario:");
     res.status(201).send({ status: "success", message: "Usuario creado con extito." });
