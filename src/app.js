@@ -13,7 +13,7 @@ import cors from 'cors';
 // Imports Routes
 import sessionsRouter from "./routes/loginAndRegister/sessions.router.js";
 import usersViewRouter from "./routes/LoginAndRegister/users.views.router.js";
-import viewRouter from "./routes/views.router.js";
+import viewsRouter from "./routes/views.router.js";
 import productsRouter from "./routes/restructuring/products.router.js";
 import cartsRouter from "./routes/restructuring/carts.router.js";
 import jwtRouter from './routes/restructuring/jwt.router.js'
@@ -92,7 +92,7 @@ app.set("view engine", "hbs");
 app.set("views", `${__dirname}/views`);
 
 app.use(express.static(`${__dirname}/public`));
-app.use("/", viewRouter);
+app.use("/", viewsRouter);
 app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
 app.use("/api/messages", messagesRouter);
@@ -130,7 +130,6 @@ const mongoInstance = async () => {
     }
 }
 mongoInstance()
-mongoInstance()
 
 socketServer.on("connection", async (socketClient) => {
 	
@@ -146,7 +145,7 @@ socketServer.on("connection", async (socketClient) => {
 		console.log("Cliente Conectado: ", email);
 		userEmailApp = email;
 		socketClient.emit("realTimeProducts", {
-			products: await productDao.getAllProducts(),
+			products: await productDao.getAll(),
 			cart: await cartDao.getCartByUser(userEmailApp),
 		});
 	});
@@ -155,7 +154,7 @@ socketServer.on("connection", async (socketClient) => {
 		await productDao.createProduct(newProduct);
 		console.log("addProductRTProd")
 		socketServer.emit("realTimeProducts", {
-			products: await productDao.getAllProducts(),
+			products: await productDao.getAll(),
 			cart: await cartDao.getCartByUser(userEmailApp),
 		});
 	});
@@ -171,7 +170,7 @@ socketServer.on("connection", async (socketClient) => {
 			product: await productDao.getProductById(productId),
 		});
 		socketServer.emit("realTimeProducts", {
-			products: await productDao.getAllProducts(),
+			products: await productDao.getAll(),
 			cart: await cartDao.getCartByUser(userEmailApp),
 		});
 	});
@@ -179,7 +178,7 @@ socketServer.on("connection", async (socketClient) => {
 	socketClient.on("deleteProduct", async (productId) => {
 		await productDao.deleteProduct(productId);
 		socketServer.emit("realTimeProducts", {
-			products: await productDao.getAllProducts(),
+			products: await productDao.getAll(),
 			cart: await cartDao.getCartByUser(userEmailApp),
 		});
 	});
@@ -239,7 +238,7 @@ socketServer.on("connection", async (socketClient) => {
 	socketClient.on("addToCart", async ({ productId, currentUserEmail }) => {
 		await cartDao.addToCart(currentUserEmail, productId, 1);
 		socketClient.emit("realTimeProducts", {
-			products: await productDao.getAllProducts(),
+			products: await productDao.getAll(),
 			cart: await cartDao.getCartByUser(currentUserEmail),
 		});
 	});
@@ -278,7 +277,7 @@ socketServer.on("connection", async (socketClient) => {
 				);
 				socketClient.emit("productsCartInfo", productsInfo);
 				socketClient.emit("realTimeProducts", {
-					products: await productDao.getAllProducts(),
+					products: await productDao.getAll(),
 					cart: await cartDao.getCartByUser(userEmail),
 				});
 			}
@@ -310,7 +309,7 @@ socketServer.on("connection", async (socketClient) => {
 
 			socketClient.emit("productsCartInfo", productsInfo);
 			socketClient.emit("realTimeProducts", {
-				products: await productDao.getAllProducts(),
+				products: await productDao.getAll(),
 				cart: updatedCart,
 			});
 		} catch (error) {
@@ -327,13 +326,13 @@ socketServer.on("connection", async (socketClient) => {
 /*=============================================
 =            connectMongoDB                   =
 =============================================*/
-const connectMongoDB = async () => {
-	try {
-		await mongoose.connect(MONGO_URL);
-		console.log("Conectado con exito a la DB usando Mongoose!!");
-	} catch (error) {
-		console.error("No se pudo conectar a la BD usando Moongose: " + error);
-		process.exit();
-	}
-};
-connectMongoDB();
+// const connectMongoDB = async () => {
+// 	try {
+// 		await mongoose.connect(MONGO_URL);
+// 		console.log("Conectado con exito a la DB usando Mongoose!!");
+// 	} catch (error) {
+// 		console.error("No se pudo conectar a la BD usando Moongose: " + error);
+// 		process.exit();
+// 	}
+// };
+// connectMongoDB();

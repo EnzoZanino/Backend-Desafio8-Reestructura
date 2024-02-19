@@ -4,6 +4,10 @@ class productDao {
 	constructor() {
 		this.model = productModel;
 	}
+	
+	async getAll() {
+        return await this.model.find()
+    }
 
 	async getAllProducts(limit, page, sort, query) {
 		try {
@@ -14,7 +18,8 @@ class productDao {
 			};
 
 			const filter = query ? { $text: { $search: query } } : {};
-			const result = await productDao.model.paginate(filter, options);
+			const result = await this.model.paginate(filter, options);
+			
 			const response = {
 				status: "success",
 				payload: result.docs,

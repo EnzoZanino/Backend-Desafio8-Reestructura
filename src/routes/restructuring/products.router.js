@@ -1,6 +1,6 @@
 import { Router } from "express";
 import {
-	getProductsController,
+	getAllProductsController,
 	getProductController,
 	postProductController,
 	updateProductController,
@@ -10,7 +10,7 @@ import {
 const ProductRouter = Router();
 
 //Get products
-ProductRouter.get("/", getProductsController);
+ProductRouter.get("/", getAllProductsController);
 
 //Get product
 ProductRouter.get("/:pid", getProductController);

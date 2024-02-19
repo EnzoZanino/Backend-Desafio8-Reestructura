@@ -6,7 +6,7 @@ import {
 	deleteProduct,
 } from "../services/productsServices.js";
 
-export const getProductsController = async (req, res) => {
+export const getAllProductsController = async (req, res) => {
 	const { limit, page, sort, query} = req.query;
 	try {
 		let products = await getProducts(limit, page, sort, query);
