@@ -29,7 +29,7 @@ export const getProductController = async (req, res) => {
 	}
 };
 
-export const postProduct = async (req, res) => {
+export const postProductController = async (req, res) => {
 	const product = req.body;
 	try {
 		await postProduct(product);
@@ -39,7 +39,7 @@ export const postProduct = async (req, res) => {
 	}
 };
 
-export const putProductController = async (req, res) => {
+export const updateProductController = async (req, res) => {
 	const pid = req.params.pid;
 	const product = req.body;
 	try {

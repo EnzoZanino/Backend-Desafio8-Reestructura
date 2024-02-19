@@ -1,4 +1,4 @@
-import productsDao from "../dao/mdbManagers/products.dao.js";
+import productsDao from "../daos/dbManager/product.dao.js";
 
 export const getProducts = async (limit, page, sort, query) => {
 	return await productsDao.getAllProducts(limit, page, sort, query);
